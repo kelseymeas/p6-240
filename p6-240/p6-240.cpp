@@ -2,7 +2,7 @@
 //// Kelsey Meas -- Project 6 -- CPSC 240-13 ////
 ////-----------------------------------------////
 
-// Testint git
+// This is pretty darn cool
 
 #include "p6-helpers.h"
 #include <iostream>
