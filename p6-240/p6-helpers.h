@@ -208,21 +208,22 @@ void asm_Convenient_Store() {
     std::cout << "How Many Sandwiches? ";
     std::cin >> sand;
 
+    //   st[0] = C     //   st[1] = B   //   st[2] = A
     __asm {
-        fld drinkp;
-        fld drink;
-        fmul;
-        fstp bill;
+        fld drinkp; //   s[0] = drinkp
+        fld drink;  //   s[0] = drink  //   s[1] = drinkp
+        fmul;	    //   s[0] = drinkp * drink
+        fstp bill;  //   bill = drinkp * drink
 
-        fld sandp;
-        fld sand;
-        fmul;
-        fstp bill2;
+        fld sandp;  //   s[0] = sandp
+        fld sand;   //   s[0] = sand   //   s[1] = sandp
+        fmul;	    //   s[0] = sandp * sand  
+        fstp bill2; //   bill2 = sandp * sand
 
-        fld bill;
-        fld bill2;
-        fadd;
-        fstp finalBill;
+        fld bill;   //   s[0] = bill
+        fld bill2;  //   s[0] = bill2  //   s[1] = bill
+        fadd;       //   s[0] = bill + bill2
+        fstp finalBill; //   finalBill = bill + bill2
     }
 
     std::cout << "Your Total Today Is: $"

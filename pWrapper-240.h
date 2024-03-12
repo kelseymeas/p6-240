@@ -14,17 +14,24 @@
 // |            -- Variables --             |  
 // ------------------------------------------ 
 std::vector<void(*)()>   functions = {
+    // Project 6
     asm_Area_Perimeter,
     asm_Quadratic_Formula_Add,
     asm_Quadratic_Formula_Sub,
-    asm_Convenient_Store
+    asm_Convenient_Store,
+    asm_2d_array_sum,
+    asm_sort_array,
+    asm_3d_array_sum,
 };
 
 std::vector<std::string> functionNames = {
     "1. Area & Perimeter",
     "2. Quadratic Formula +",
     "3. Quadratic Formula -",
-    "4. Convenient Store"
+    "4. Convenience Store Receipt",
+    "5. Sum of 2D Array",
+    "6. Sum of 3D Array",
+    "7. Bubble Sort",
 };
 // ------------------------------------------ 
 // ------------------------------------------ 

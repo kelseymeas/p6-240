@@ -2,11 +2,6 @@
 #define P5_HELPERS_H
 
 #include <iostream>
-#include <iomanip>
-#include <string>
-#include <cctype>
-#include <cstdlib>
-#include <vector>
 
 // ------------------------------------------
 // |            -- Variables --             |  
@@ -26,7 +21,7 @@
 						 {{13, 14}, {15, 16}, {17, 18}}};
 // ------------------------------------------ 
 // ------------------------------------------ 
-/////////////////////////////////////////////
+   
 // ------------------------------------------
 // |       -- Project Functions --         |
 // ------------------------------------------
@@ -109,11 +104,11 @@
 			Jmp forLoop;	
 
 		swapper:		
-			xchg eax, [esi + 4];
-			xchg eax, [esi]
+			xchg eax, [esi + 4];  // eax = [esi + 4] , [esi + 4] = [esi]
+			xchg eax, [esi];	  // eax = [esi]     , [esi]     = [esi + 4]
 			inc count;
 			inc ind;
-			add esi, 4;  
+			add esi, 4;  // move to next index location (int)
 			Jmp forLoop;
 
 		checkSorted:
@@ -240,6 +235,4 @@
 
 // ------------------------------------------ 
 // ------------------------------------------ 
-
-
 #endif 
